@@ -19,7 +19,7 @@ export default defineConfig({
         noticia3: resolve(__dirname, "blog/noticia3.html"),
         blockchain: resolve(__dirname, "cursos/blockchain.html"),
         ciberseguridad: resolve(__dirname, "cursos/ciberseguridad.html"),
-        full_stack: resolve(__dirname, "cursos/full_stack.html"),
+        fullstack: resolve(__dirname, "cursos/fullstack.html"),
         ia: resolve(__dirname, "cursos/ia.html"),
       },
     },
