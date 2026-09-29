@@ -1,0 +1,88 @@
+@use "../abstracts" as a;
+
+.registro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  margin-top: 24px;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 8px;
+
+    label {
+      @include a.body-s;
+      color: a.$plum;
+      font-weight: 700;
+    }
+
+    input:not([type="file"]),
+    textarea {
+      @include a.body-m;
+      font-family: inherit;
+      color: a.$plum;
+      background-color: a.$white;
+      border: 1px solid a.$border;
+      border-radius: 8px;
+      padding: 12px 16px;
+      transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+      &::placeholder {
+        color: rgba(a.$text, 0.6);
+      }
+
+      &:focus {
+        outline: none;
+        border-color: a.$violet;
+        box-shadow: 0 0 0 3px rgba(113, 44, 136, 0.1);
+      }
+
+      &:not(:placeholder-shown):not(:focus):invalid {
+        border-color: #e63946;
+        color: #e63946;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.15);
+      }
+    }
+
+    input[type="file"] {
+      @include a.body-m;
+      color: a.$text;
+      padding: 8px 0;
+      cursor: pointer;
+
+      &::file-selector-button {
+        @include a.body-s;
+        font-family: inherit;
+        font-weight: 600;
+        color: a.$violet;
+        background-color: a.$bg2;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 16px;
+        margin-right: 16px;
+        cursor: pointer;
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease;
+
+        &:hover {
+          background-color: a.$violet;
+          color: a.$white;
+        }
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+  }
+}

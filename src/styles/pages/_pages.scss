@@ -1,0 +1,172 @@
+@use "../abstracts" as a;
+
+.blog,
+.quienes_somos,
+.nuestros_cursos,
+.ia,
+.blockchain,
+.ciberseguridad,
+.noticia,
+.form,
+.fullstack {
+  h1 {
+    @include a.heading-s;
+
+    @include a.breakpoint(tablet) {
+      @include a.heading-m;
+    }
+
+    @include a.breakpoint(desktop) {
+      @include a.heading-l;
+    }
+  }
+}
+
+.noticias,
+.curso,
+.nuestros_cursos,
+.historias {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+}
+
+.curso {
+  @include a.breakpoint(tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    text-align: center;
+    align-items: flex-start;
+
+    h3 {
+      grid-column: 1 /-1;
+      grid-row: 1;
+      margin: 0;
+    }
+
+    p {
+      grid-column: 1;
+      grid-row: 2;
+      margin: 0;
+    }
+
+    ul {
+      grid-column: 2;
+      grid-row: 2;
+      margin: 0;
+    }
+
+    > .btn {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+
+  @include a.breakpoint(desktop) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+
+  @include a.breakpoint(desktop) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  .about {
+    @include a.breakpoint(desktop) {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.fullstack,
+.ciberseguridad,
+.blockchain,
+.ia,
+.noticia {
+  @include a.breakpoint(desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    text-align: center;
+
+    figure {
+      grid-row: 1 / span 4;
+      margin: 0;
+    }
+
+    &.img-right {
+      h1,
+      p,
+      ul {
+        grid-column: 1;
+      }
+      figure {
+        grid-column: 2;
+      }
+    }
+
+    &.img-left {
+      h1,
+      p,
+      ul {
+        grid-column: 2;
+      }
+      figure {
+        grid-column: 1;
+      }
+    }
+  }
+}
+
+.nuestros_cursos {
+  @include a.breakpoint(desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      margin-bottom: 0;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    &.img-left {
+      figure {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      ul {
+        grid-column: 2;
+        grid-row: 2;
+      }
+    }
+  }
+}

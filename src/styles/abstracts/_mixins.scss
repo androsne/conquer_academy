@@ -1,0 +1,97 @@
+//Reusable blocks of logic, such as media query helpers, flexbox shorthand shortcuts, or responsive typography functions.
+
+@use "variables" as a;
+
+// Breakpoints
+@mixin breakpoint($bp) {
+  @if $bp == tablet {
+    @media (min-width: a.$bp-tablet) {
+      @content;
+    }
+  }
+
+  @if $bp == desktop {
+    @media (min-width: a.$bp-desktop) {
+      @content;
+    }
+  }
+}
+
+// Headings
+@mixin heading-xl {
+  font-family: a.$font-heading;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: -1.5px;
+  color: a.$plum;
+}
+
+@mixin heading-l {
+  font-family: a.$font-heading;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 62px;
+  letter-spacing: -1px;
+  color: a.$plum;
+}
+
+@mixin heading-m {
+  font-family: a.$font-heading;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 53px;
+  letter-spacing: -1px;
+  color: a.$plum;
+}
+
+@mixin heading-s {
+  font-family: a.$font-heading;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 43px;
+  letter-spacing: -0.5px;
+  color: a.$plum;
+}
+
+@mixin heading-xs {
+  font-family: a.$font-heading;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 31px;
+  letter-spacing: -0.25px;
+  color: a.$plum;
+}
+
+// Bodies
+@mixin body-l {
+  font-family: a.$font-primary;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+@mixin body-m {
+  font-family: a.$font-primary;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+@mixin body-s {
+  font-family: a.$font-primary;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0;
+}

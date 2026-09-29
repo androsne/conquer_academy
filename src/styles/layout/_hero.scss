@@ -1,0 +1,42 @@
+@use "../abstracts" as a;
+
+.hero {
+  @include a.breakpoint(desktop) {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 48px;
+  }
+
+  &-title {
+    @include a.heading-m;
+
+    @include a.breakpoint(tablet) {
+      @include a.heading-l;
+    }
+
+    @include a.breakpoint(desktop) {
+      flex: 1;
+      @include a.heading-xl;
+    }
+  }
+
+  figure {
+    margin: 0;
+    width: 100%;
+
+    @include a.breakpoint(desktop) {
+      flex: 1;
+    }
+
+    img {
+      width: 100%; // Keeps it filling the right-side column
+    }
+  }
+}
+
+.figcap {
+  @include a.body-s;
+  margin-top: 8px;
+  text-align: right;
+}

@@ -1,0 +1,99 @@
+@use "../abstracts" as a;
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  background-color: a.$bg2;
+  border-radius: 0 0 16px 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 32px rgba(a.$plum, 0.05);
+
+  @include a.breakpoint(tablet) {
+    margin-bottom: 24px;
+    padding: 24px;
+  }
+
+  @include a.breakpoint(desktop) {
+    margin-bottom: 32px;
+    padding: 32px;
+  }
+
+  figure {
+    max-width: 220px;
+  }
+
+  nav {
+    .burger-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      color: a.$plum;
+      cursor: pointer;
+
+      @include a.breakpoint(desktop) {
+        display: none;
+      }
+
+      &:hover {
+        color: a.$violet;
+      }
+    }
+
+    ul {
+      display: none;
+
+      &.is-open {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: a.$white;
+        padding: 16px;
+        border-radius: 8px;
+        box-shadow: 0 8px 12px rgba(32, 12, 39, 0.15);
+        gap: 8px;
+        z-index: 10;
+        min-width: 172px;
+      }
+
+      @include a.breakpoint(desktop) {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background: none;
+        padding: 0;
+        box-shadow: none;
+        gap: 32px;
+      }
+
+      li {
+        @include a.body-l;
+
+        a,
+        strong {
+          display: inline-block;
+          padding: 8px 0;
+          transition:
+            color 0.3s ease,
+            transform 0.3s;
+          cursor: pointer;
+        }
+
+        &:hover {
+          a,
+          strong {
+            color: a.$teal;
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  }
+}

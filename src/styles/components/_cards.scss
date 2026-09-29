@@ -1,0 +1,64 @@
+@use "../abstracts" as a;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  border-radius: 16px 0 16px 0;
+  margin-bottom: 32px;
+  padding: 16px 16px 32px 16px;
+
+  @include a.breakpoint(tablet) {
+    padding: 24px 24px 48px 24px;
+    gap: 24px;
+  }
+
+  @include a.breakpoint(desktop) {
+    padding: 32px 32px 64px 32px;
+    gap: 32px;
+  }
+
+  h2,
+  h3 {
+    @include a.heading-s;
+
+    @include a.breakpoint(tablet) {
+      @include a.heading-m;
+    }
+
+    @include a.breakpoint(desktop) {
+      @include a.heading-l;
+    }
+  }
+
+  p,
+  ul {
+    @include a.body-s;
+
+    @include a.breakpoint(tablet) {
+      @include a.body-m;
+    }
+
+    @include a.breakpoint(desktop) {
+      @include a.body-l;
+    }
+  }
+
+  img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &.card-colour {
+    background-color: a.$bg2;
+    box-shadow: 0 8px 32px rgba(a.$plum, 0.05);
+  }
+
+  &.card-white {
+    background-color: a.$white;
+    box-shadow: 0 8px 32px rgba(a.$plum, 0.05);
+  }
+}

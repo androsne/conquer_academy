@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academia Conquer Blocks - Cursos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <figure>
+        <img
+          width="150px"
+          src="./src/assets/icons/logo_conquer.png"
+          alt="Logotipo de Conquer Blocks"
+        />
+      </figure>
+      <nav>
+        <button id="menu-btn" class="burger-menu" aria-label="Abrir menú">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <ul id="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quienes_somos.html">Quiénes somos</a></li>
+          <li><strong>Cursos</strong></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="registro.html">Registro</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="nuestros_cursos card card-white img-left">
+        <h1>Nuestros Cursos</h1>
+        <figure>
+          <img
+            width="500px"
+            src="./src/assets/img/curso.png"
+            alt="Imagen de los cursos disponibles"
+          />
+        </figure>
+        <ul>
+          <li>
+            <a class="btn btn-full" href="/cursos/full_stack.html"
+              >Desarrollo Web Full Stack</a
+            >
+          </li>
+          <li>
+            <a class="btn btn-full" href="/cursos/blockchain.html"
+              >Desarrollo Blockchain</a
+            >
+          </li>
+          <li>
+            <a class="btn btn-full" href="/cursos/ia.html"
+              >Inteligencia Artificial</a
+            >
+          </li>
+          <li>
+            <a class="btn btn-full" href="/cursos/ciberseguridad.html">
+              Ciberseguridad</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Conquer Blocks 2026 ®
+        <strong><a class="link" href="aviso_legal.html">Aviso Legal</a></strong>
+      </p>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

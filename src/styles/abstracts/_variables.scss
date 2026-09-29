@@ -1,0 +1,21 @@
+//Design tokens such as colors, font families, spacing scales, breakpoints, and z-index layers.
+
+//Colors
+$plum: #200c27; //Headings,
+$teal: #4ea690; //Badge
+$violet: #712c88; //Button
+$blue: #67bad5; //Hover
+
+$white: #ffffff; //Background, cards and forms
+$bg2: #f0e5f6; //2nd background
+
+$text: #545157; // Secondary text
+$border: #c2c0c3;
+
+//Typography
+$font-heading: "Manrope", sans-serif;
+$font-primary: "Inter", sans-serif;
+
+//Breakpoints
+$bp-tablet: 768px;
+$bp-desktop: 1200px;

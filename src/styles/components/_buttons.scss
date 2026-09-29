@@ -1,0 +1,42 @@
+@use "../abstracts" as a;
+
+.btn {
+  display: inline-block;
+  @include a.body-l;
+  color: a.$white;
+  background-color: a.$blue;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s,
+    box-shadow 0.2s ease;
+
+  &.btn-secondary {
+    background-color: a.$violet;
+  }
+
+  &.btn-full {
+    width: 100%;
+    display: block;
+  }
+
+  &:hover {
+    background-color: a.$teal;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(32, 12, 39, 0.15);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+}
+
+.link:hover {
+  color: a.$teal;
+}

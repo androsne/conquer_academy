@@ -1,0 +1,9 @@
+//Font families, base text colors, heading scales (h1–h6), link styles, and global line heights.
+
+@use "../abstracts" as a;
+
+body {
+  font-family: a.$font-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
