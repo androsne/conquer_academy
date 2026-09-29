@@ -103,7 +103,8 @@
 .ciberseguridad,
 .blockchain,
 .ia,
-.noticia {
+.noticia,
+.quienes_somos {
   @include a.breakpoint(desktop) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -118,6 +119,7 @@
 
     &.img-right {
       h1,
+      h2,
       p,
       ul {
         grid-column: 1;
@@ -129,6 +131,7 @@
 
     &.img-left {
       h1,
+      h2,
       p,
       ul {
         grid-column: 2;
